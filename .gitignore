@@ -16,7 +16,8 @@ $RECYCLE.BIN/
 
 # contains api keys
 config.db
-
+initconfigmartin.py
+rss/output/*
 # =========================
 # Operating System Files
 # =========================
@@ -29,7 +30,8 @@ config.db
 .LSOverride
 
 # Icon must ends with two \r.
-Icon
+Icon
+
 
 # Thumbnails
 ._*
