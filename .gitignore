@@ -16,8 +16,16 @@ $RECYCLE.BIN/
 
 # contains api keys
 config.db
+
 initconfigmartin.py
-rss/output/*
+*/output/
+runwiththreads.py
+runwithschedule.py
+fullrsscfg.json
+fullsources.json
+sync.db
+*/sync.db
+
 # =========================
 # Operating System Files
 # =========================

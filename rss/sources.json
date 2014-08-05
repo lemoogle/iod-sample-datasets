@@ -1,0 +1,99 @@
+{
+    "sources": [
+        {
+            "feeds": [
+                {
+                    "fields": [
+                        {
+                            "name": "categories", 
+                            "values": [
+                                "Top News"
+                            ]
+                        }
+                    ], 
+                    "rss_url": "http://feeds.bbci.co.uk/news/rss.xml\n"
+                }, 
+                {
+                    "fields": [
+                        {
+                            "name": "categories", 
+                            "values": [
+                                "World"
+                            ]
+                        }
+                    ], 
+                    "rss_url": "http://feeds.bbci.co.uk/news/world/rss.xml\n"
+                }, 
+                {
+                    "fields": [
+                        {
+                            "name": "categories", 
+                            "values": [
+                                "UK"
+                            ]
+                        }
+                    ], 
+                    "rss_url": "http://feeds.bbci.co.uk/news/uk/rss.xml\n"
+                }, 
+                {
+                    "fields": [
+                        {
+                            "name": "categories", 
+                            "values": [
+                                "Business"
+                            ]
+                        }
+                    ], 
+                    "rss_url": "http://feeds.bbci.co.uk/news/business/rss.xml\n"
+                }, 
+                {
+                    "fields": [
+                        {
+                            "name": "categories", 
+                            "values": [
+                                "Politics"
+                            ]
+                        }
+                    ], 
+                    "rss_url": "http://feeds.bbci.co.uk/news/politics/rss.xml\n"
+                }, 
+                {
+                    "fields": [
+                        {
+                            "name": "categories", 
+                            "values": [
+                                "Science", 
+                                "Environment"
+                            ]
+                        }
+                    ], 
+                    "rss_url": "http://feeds.bbci.co.uk/news/science_and_environment/rss.xml\n"
+                }, 
+                {
+                    "fields": [
+                        {
+                            "name": "categories", 
+                            "values": [
+                                "Technology"
+                            ]
+                        }
+                    ], 
+                    "rss_url": "http://feeds.bbci.co.uk/news/technology/rss.xml\n"
+                }, 
+                {
+                    "fields": [
+                        {
+                            "name": "categories", 
+                            "values": [
+                                "Entertainment", 
+                                "Arts"
+                            ]
+                        }
+                    ], 
+                    "rss_url": "http://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml\n"
+                }
+            ], 
+            "name": "BBC"
+        }
+    ]
+}

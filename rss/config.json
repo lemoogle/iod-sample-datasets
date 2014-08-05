@@ -1,0 +1,19 @@
+{
+"schedulesecs":100,
+"database":"myrssdb",
+"name":"name",
+"rss_url":"rss_url",
+"date":"date",
+"ref":"link",
+"source":"source",
+"content":"content",
+"customfields":{
+	"categories":"news_category"
+},
+"fields":{
+	"title":"title",
+	"link":"link",
+	"category":"rss_category"
+	}
+
+}
