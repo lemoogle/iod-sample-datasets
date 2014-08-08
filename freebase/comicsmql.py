@@ -138,7 +138,7 @@ def do_query(index,cursor=""):
     print index.name
     try:
         print "trying to index"
-        print index.commit().text
+        print index.commit(async=True).jobID
     except:
         print "indexing failed"
     return response.get("cursor")

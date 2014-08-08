@@ -19,10 +19,13 @@ config.db
 
 initconfigmartin.py
 */output/
+
 runwiththreads.py
 runwithschedule.py
+
 fullrsscfg.json
 fullsources.json
+
 sync.db
 */sync.db
 
