@@ -4,18 +4,15 @@ import requests
 import json
 import itertools
 from iodpython.iodindex import IODClient
-import shelve
 
-conf =shelve.open('../config.db')
 
-freebase_key = conf['freebase-key']
-iod_key=conf['iod-key']
+api_key = "AIzaSyAorSwy_yAH6ObJPJb_q9mmYSlZch5XQII"
 service_url = 'https://www.googleapis.com/freebase/v1/mqlread'
 
 query =[{
     "name":None,
     "type": "/comic_books/comic_book_series",
-    "limit": 30,
+    "limit": 10,
     "created_by":[{'name':None,'mid':None,'optional':True}],
     "publisher":[{'name':None,'mid':None,'optional':True}],
     "mid":None,
@@ -30,12 +27,15 @@ query =[{
 }]
 
 
+
+
 params = {
                 'query': json.dumps(query),
-                'key': freebase_key
+                'key': api_key
 }
 
 freebase_topic_url="https://www.googleapis.com/freebase/v1/topic{}?filter=/common/topic/description&key={}"
+
 
 
 #
@@ -109,7 +109,7 @@ def do_query(index,cursor=""):
         #print result['mid']
         
         try:
-            content = requests.get(freebase_topic_url.format(result["mid"],freebase_key)).json()
+            content = requests.get(freebase_topic_url.format(result["mid"],api_key)).json()
             content=content["property"]["/common/topic/description"]["values"][0]["value"]
             result["content"]=content
         except:
@@ -124,11 +124,8 @@ def do_query(index,cursor=""):
         #    characters=reduce(lambda x, y: x+y, characters)
         #result["featured_characters"]+=characters
         #result.pop('issues')
-        try:
-            result= flatten(result)
-            result= flattenlists(result)
-        except:
-            pass
+        result= flatten(result)
+        result= flattenlists(result)
         index.pushDoc(result)
         #print json.dumps(flatten(result),indent=4)
         #print result["continues"]
@@ -142,14 +139,12 @@ def do_query(index,cursor=""):
 
 
 client = IODClient("http://api.idolondemand.com/",
-                        iod_key)
+                        "1642237f-8d30-4263-b2f9-12efab36c779")
 #try:
-client.deleteIndex('comic_series')
-index=client.createIndex('comic_series')
+index=client.getIndex('comic_series')
 
 #except:
 ##    print "getting instead"
-
 #index= client.getIndex('comic_book_series')
 cursor = do_query(index)
 while(cursor):
