@@ -77,7 +77,8 @@ class FreebaseUtil(object):
             
             if self.description:
                 try:
-                    content = requests.get(self.freebase_topic_url.format(result["mid"],freebase_key)).json()
+                    freebase_url=self.freebase_topic_url.format(result["mid"],self.params["key"])
+                    content = requests.get(freebase_url).json()
                     content=content["property"]["/common/topic/description"]["values"][0]["value"]
                     result["content"]=content
                 except:
@@ -109,7 +110,7 @@ class FreebaseUtil(object):
             print "trying to index"
             print index.commit(async=True).jobID
         except:
-            
             print "indexing failed"
+
         return response.get("cursor")
 
