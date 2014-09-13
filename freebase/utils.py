@@ -9,7 +9,7 @@ def flatten(obj, key=""):
             #print k,v
             newkey=""
             if key:
-                newkey=key+"_"
+                newkey=key+""
             newkey+=k
             if type(v) is dict:
                 orig.update(flatten(v,newkey))
@@ -102,6 +102,8 @@ class FreebaseUtil(object):
             except:
                 pass
             #print result
+            if "authorname" in result:
+                result["category"]=result["authorname"]
             index.pushDoc(result)
             #print json.dumps(flatten(result),indent=4)
             #print result["continues"]

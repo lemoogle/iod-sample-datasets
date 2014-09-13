@@ -65,13 +65,15 @@ client = IODClient("http://api.idolondemand.com/",
 
 #   client.deleteIndex('quotesdb')
 
-try:
-    fields=["spoken_by_character_name","author_name","author_profession","source_type_name","source_name","incorrectly_attributed_to_name","addressee_name"]
-    index=client.createIndex('quotesdb',index_fields=fields, parametric_fields=fields)
+index=client.getIndex('newquotesdb')
+
+#try:
+ #   fields=["spoken_by_character_name","author_name","author_profession","source_type_name","source_name","incorrectly_attributed_to_name","addressee_name"]
+  # index=client.createIndex('quotesdb',index_fields=fields, parametric_fields=fields)
    # index=client.createIndex('quotesdb',index_fields=["spoken_by_character_*","author_*","source_*","incorrectly_attributed_to_*","addressee_*"],parametric_fields=["spoken_by_character_*","author_*","source_*","incorrectly_attributed_to_*","addressee_*"])
 
-except:
-    index=client.getIndex('quotesdb')
+#except:
+#    index=client.getIndex('quotesdb')
 
 #except:
 ##    print "getting instead"
