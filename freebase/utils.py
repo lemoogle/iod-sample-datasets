@@ -74,7 +74,7 @@ class FreebaseUtil(object):
         response = requests.get(url).json()#json.loads(urllib2.urlopen(url).read())
         for result in response['result']:
             #print result['mid']
-            
+            print result
             if self.description:
                 try:
                     freebase_url=self.freebase_topic_url.format(result["mid"],self.params["key"])
